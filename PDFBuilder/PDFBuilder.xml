@@ -35,12 +35,53 @@
             PDF Controller for creating PDF documents
             </summary>
         </member>
-        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(System.String)">
+        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(PDFBuilder.Models.PDFFromHTML)">
             <summary>
             Create a PDF from HTML string
             </summary>
-            <param name="html">HTML string</param>
-            <returns></returns>
+            <param name="data">HTML to PDF information</param>
+            <returns>Byte array containing the converted HTML as a PDF</returns>
+        </member>
+        <member name="T:PDFBuilder.Models.Footer">
+            <summary>
+            Optional footer information for a PDF
+            </summary>
+        </member>
+        <member name="P:PDFBuilder.Models.Footer.HTML">
+            <summary>
+            HTML to display in the footer
+            </summary>
+        </member>
+        <member name="T:PDFBuilder.Models.Header">
+            <summary>
+            Optional header information for a PDF
+            </summary>
+        </member>
+        <member name="P:PDFBuilder.Models.Header.HTML">
+            <summary>
+            HTML to display in the header
+            </summary>
+        </member>
+        <member name="T:PDFBuilder.Models.PDFFromHTML">
+            <summary>
+            Input information to create a PDF using the supplied HTML string and
+            optional header and footer information.
+            </summary>
+        </member>
+        <member name="P:PDFBuilder.Models.PDFFromHTML.PDFHeader">
+            <summary>
+            Header 
+            </summary>
+        </member>
+        <member name="P:PDFBuilder.Models.PDFFromHTML.HTML">
+            <summary>
+            HTML to convert to a PDF
+            </summary>
+        </member>
+        <member name="P:PDFBuilder.Models.PDFFromHTML.PDFFooter">
+            <summary>
+            Footer
+            </summary>
         </member>
         <member name="T:PDFBuilder.Program">
             <summary>
@@ -69,6 +110,18 @@
             </summary>
             <param name="args"></param>
             <returns></returns>
+        </member>
+        <member name="T:PDFBuilder.Services.Interfaces.IPDFService">
+            <summary>
+            Service for creating PDF documents using iText
+            </summary>
+        </member>
+        <member name="M:PDFBuilder.Services.Interfaces.IPDFService.GeneratePDFFromHTML(System.String)">
+            <summary>
+            Generate a PDF from an HTML string with optional header and footer values
+            </summary>
+            <param name="html">HTML and header/footer information</param>
+            <returns><seealso cref="T:System.Byte">byte</seealso> array that contains the rendered PDF document</returns>
         </member>
         <member name="T:PDFBuilder.Startup">
             <summary>
