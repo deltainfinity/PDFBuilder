@@ -1,8 +1,5 @@
 ﻿using System.IO;
-using System.Threading.Tasks;
 using iText.Html2pdf;
-using iText.IO.Source;
-using iText.Kernel.Pdf;
 using iText.StyledXmlParser.Css.Media;
 using Microsoft.AspNetCore.Mvc;
 using PDFBuilder.Models;

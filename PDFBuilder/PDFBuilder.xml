@@ -35,12 +35,12 @@
             PDF Controller for creating PDF documents
             </summary>
         </member>
-        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(System.String)">
+        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(PDFBuilder.Models.PDFFromHTML)">
             <summary>
             Create a PDF from HTML string
             </summary>
-            <param name="html">HTML string</param>
-            <returns></returns>
+            <param name="data">HTML to PDF information</param>
+            <returns>Byte array containing the converted HTML as a PDF</returns>
         </member>
         <member name="T:PDFBuilder.Models.Footer">
             <summary>
