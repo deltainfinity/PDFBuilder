@@ -22,7 +22,7 @@ namespace PDFBuilder.Controllers
         /// <param name="data">HTML to PDF information</param>
         /// <returns>Byte array containing the converted HTML as a PDF</returns>
         [HttpPost("CreateFromHtml")]
-        public ActionResult<byte[]> CreateFromHtml([FromBody]PDFFromHTML data)
+        public ActionResult<byte[]> CreateFromHtml([FromBody]string data)
         {
             Logger.Information("Create PDF From HTML endpoint called");
             var properties = new ConverterProperties()
@@ -30,7 +30,7 @@ namespace PDFBuilder.Controllers
 
             using var memoryStream = new MemoryStream();
             {
-                HtmlConverter.ConvertToPdf(data.HTML, memoryStream, properties);
+                HtmlConverter.ConvertToPdf(data, memoryStream, properties);
 
                 return Ok(memoryStream.ToArray());
             }
