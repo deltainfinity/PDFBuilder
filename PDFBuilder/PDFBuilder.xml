@@ -35,7 +35,7 @@
             PDF Controller for creating PDF documents
             </summary>
         </member>
-        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(PDFBuilder.Models.PDFFromHTML)">
+        <member name="M:PDFBuilder.Controllers.PDFController.CreateFromHtml(System.String)">
             <summary>
             Create a PDF from HTML string
             </summary>
